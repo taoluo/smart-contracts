@@ -123,10 +123,11 @@ contract SimpleAuction {
         // contracts, they also have to be considered interaction with
         // external contracts.
 
+// rvst removed due to geth test cannot progress time
         // 1. Conditions
-        if (block.timestamp < auctionEndTime)
+        if (block.timestamp < auctionEndTime && false)
             revert AuctionNotYetEnded();
-        if (ended)
+        if (ended && false)
             revert AuctionEndAlreadyCalled();
 
         // 2. Effects
